@@ -1,0 +1,91 @@
+
+
+        .form {
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+            
+            
+        }
+
+        /* Container do formulário */
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+           
+        }
+
+        
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 1em;
+            color: #fff;
+        }
+
+        /* Campos de seleção e texto */
+        select, textarea {
+            width: 100%;
+            padding: 0.75em;
+            margin-top: 0.5em;
+            border: none;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        select:focus, textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botão de enviar */
+        button {
+            width: 100%;
+            padding: 0.75em;
+            margin-top: 1.5em;
+            background: #ff8c00;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: #ff7300;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        

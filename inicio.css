@@ -1,0 +1,299 @@
+* {
+    box-sizing:  border-box;                    /* ajuda a manter um controle mais previsível sobre o tamanho dos elementos no layout. */
+    margin: 0;                                  /* margem */
+    padding: 0;                                 /* preenchimento */
+}
+
+body {
+    font-family: sans-serif;                    /* define a fonte do elemento */
+    color: #222;                            /* cor */
+    padding-bottom: 0px;                       /*Melhora a legibilidade ao evitar que o texto fique muito próximo de outros elementos.*/
+}
+
+ .container{
+    max-width: 1200px;                      /* definir a largura máxima de um elemento. */
+    margin: 0 auto;                          /* essa propriedade faz com que as margens esquerda e direita sejam ajustadas automaticamente */
+ }
+
+ .nav{
+    position: fixed;                       /* fixa o elemento em uma posição específica na tela, mesmo quando o usuário rolar a página. */
+    background-color: #424141;           /* define a cor de fundo de um elemento. */
+    top: 0;                                /* especifica a distância entre a borda superior do elemento e a borda superior do contêiner */
+    left: 0;                                /* move o elemento para a direita se for maior que 0. */
+    right: 0;                                /* move o elemento para a esquerda se for maior que 0 */
+    transition: all 0.3s ease-in-out;        /* cria uma transição. */
+ }
+
+ .nav .container{
+    display: flex;                              /* deixa o layout flexiveis */
+    justify-content: space-between;             /* define aonde os elementos vão entrar posicionados */
+    align-items: center;                        /* alinha os itens */
+    padding: 20px 0;                            /* preenchimento */
+    transition: all 0.3s ease-in-out;           /* cria uma transição. */
+ }
+
+ .nav ul{
+    display: flex;                              /* deixa o layout flexiveis */
+    align-items: center;                         /* alinha os itens */
+    justify-content: center;                    /* define aonde os elementos vão entrar posicionados */
+    list-style: none;                            /* remove o marcador da lista */
+ }
+
+ .nav a{
+    color: #fff;                               /* cor */
+    text-decoration: none;                        /* definir o estilo de decoração de texto */ 
+    padding: 7px 15px;                            /* preenchimento */
+    transition: all 0.3s ease-in-out;             /* cria uma transição.*/
+ }
+
+
+ /* ----------- JavaScript ------------- */
+
+ .nav.active a{
+    background: white;
+}
+
+.nav.active {
+    background: white;
+}
+
+
+
+.nav.active a{
+    color: #000;
+}
+
+       /* ------------------------ */
+
+.hero{
+background: url(https://impactagesso.com/wp-content/uploads/2023/04/SANCA-DE-GESSO-3-2-1-1024x576.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.hero h1{
+    font-size: 46px;
+    margin: -20px 0 20px;
+}
+
+
+.hero p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    max-width: 700px;
+    line-height: 30px;
+    font-style: italic;
+}
+}
+
+section{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Cor de fundo */
+    font-family: Arial, sans-serif;
+}
+
+.recipiente-de-conteudo{ /* Flexbox para centralizar e alinhar lado a lado */
+    
+    display: flex;
+    justify-content: center;/* Centraliza horizontalmente */
+    align-items: center;/* Centraliza verticalmente */
+    gap: 20px;/* Espaçamento entre as divs */
+    flex-wrap: wrap;/* Permite quebrar em várias linhas em telas pequenas */
+}
+
+.content {
+    background-color: #444444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+
+.content h1 {
+    color: #ffffff;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Efeitos de hover */
+.content:hover {
+    transform: scale(1.05); /* Aumenta o tamanho levemente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais profunda */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --color-neutral-50: #424141;
+
+}
+
+main{
+    height: 50vh;
+}
+
+footer{
+    width: 100%;
+    color: var(--color-neutral-40);
+    
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+#footer-content{
+    background-color: var(--color-neutral-50);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-contacts h1{
+    margin-bottom: 0.75rem;
+
+}
+
+#footer-social-media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+}
+
+#footer-social-media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link:hover{
+    opacity: 0.8;
+}
+
+#footer-social-media .footer-link{
+    font-size: 1.25rem;
+}
+
+#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#fecebook{
+    background-color: #4267b3;
+}
+
+#whatsapp{
+    background-color: #25d366;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+
+}
+
+.footer-list .footer-link{
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover{
+    color: #7f37c9;
+}
+
+#footer-subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-subscribe p{
+    color: var(--color-neutral-30);
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-10);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer-content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    #footer-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem 2rem;
+    }
+}
